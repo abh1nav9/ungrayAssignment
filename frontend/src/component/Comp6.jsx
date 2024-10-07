@@ -7,7 +7,7 @@ const Comp6 = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get("http://localhost:3000/api/data");
-      setProducts(response.data.table2); // assuming your API returns the data in the mentioned format
+      setProducts(response.data.table2);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

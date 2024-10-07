@@ -29,14 +29,14 @@ const Comp2 = () => {
               {
                 label: 'Last Year',
                 data: lastYearData,
-                backgroundColor: 'rgba(135, 206, 235, 0.5)', // SkyBlue with transparency
-                borderColor: 'rgba(135, 206, 235, 1)', // SkyBlue
+                backgroundColor: 'rgba(135, 206, 235, 0.5)',
+                borderColor: 'rgba(135, 206, 235, 1)',
               },
               {
                 label: 'This Year',
                 data: thisYearData,
-                backgroundColor: 'rgba(0, 0, 255, 0.5)', // Blue with transparency
-                borderColor: 'rgba(0, 0, 255, 1)', // Blue
+                backgroundColor: 'rgba(0, 0, 255, 0.5)',
+                borderColor: 'rgba(0, 0, 255, 1)', 
               },
             ],
           },

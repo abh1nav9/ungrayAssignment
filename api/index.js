@@ -2,13 +2,11 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const app = express();
-const PORT = 3001; // Port for the Express server
+const PORT = 3001;
 
-// Middleware
-app.use(cors()); // Enable CORS
-app.use(express.json()); // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
 
-// Endpoint for Comp1
 app.get('/api/comp1', (req, res) => {
     const options = {
         hostname: '13.201.49.61',
@@ -29,7 +27,7 @@ app.get('/api/comp1', (req, res) => {
         });
 
         response.on('end', () => {
-            res.status(response.statusCode).json(JSON.parse(data)); // Send response data
+            res.status(response.statusCode).json(JSON.parse(data));
         });
     });
 
@@ -41,7 +39,6 @@ app.get('/api/comp1', (req, res) => {
     request.end();
 });
 
-// Endpoint for Comp3
 app.get('/api/comp3', (req, res) => {
     const options = {
         hostname: '13.201.49.61',
@@ -62,7 +59,7 @@ app.get('/api/comp3', (req, res) => {
         });
 
         response.on('end', () => {
-            res.status(response.statusCode).json(JSON.parse(data)); // Send response data
+            res.status(response.statusCode).json(JSON.parse(data));
         });
     });
 
@@ -74,7 +71,6 @@ app.get('/api/comp3', (req, res) => {
     request.end();
 });
 
-// Endpoint for Comp5
 app.get('/api/comp5', (req, res) => {
     const options = {
         hostname: '13.201.49.61',
@@ -95,7 +91,7 @@ app.get('/api/comp5', (req, res) => {
         });
 
         response.on('end', () => {
-            res.status(response.statusCode).json(JSON.parse(data)); // Send response data
+            res.status(response.statusCode).json(JSON.parse(data));
         });
     });
 
@@ -107,7 +103,7 @@ app.get('/api/comp5', (req, res) => {
     request.end();
 });
 
-// Start the server
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

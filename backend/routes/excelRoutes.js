@@ -6,7 +6,7 @@ const router = express.Router();
 const upload = multer({ dest: "uploads/" });
 
 // Upload Excel file
-router.post("/upload", upload.single("E:\frontend_assignment_doc\frontend_assignment_doc\SheetData.xlsx"), insertDataFromExcel);
+router.post("/upload", upload.single("path for SheetData.xlsx"), insertDataFromExcel);
 
 // Fetch data from tables
 router.get("/data", fetchDataFromTables);

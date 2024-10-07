@@ -3,7 +3,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import MinorComp from "./pages/MinorComp";
 import SideBar from "./pages/SideBar";
-import './App.css'; // Import Tailwind CSS (if not already imported)
+import './App.css';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

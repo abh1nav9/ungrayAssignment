@@ -2,38 +2,38 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Comp1 = () => {
-  // State variables
+
   const [data, setData] = useState({
     purchases: 4294,
-    revenue: 322000, // Updated to match fetched data structure
-    refunds: 8200,   // Updated to match fetched data structure
+    revenue: 322000, 
+    refunds: 8200, 
   });
   const [profitLossPercentage, setProfitLossPercentage] = useState({
     purchases: 0,
     revenue: 0,
     refunds: 0,
   });
-  const [error, setError] = useState(''); // State for error handling
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchExternalData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/comp1/'); // Use Axios to fetch data
+        const response = await axios.get('http://localhost:3001/api/comp1/');
         console.log('Fetched external data:', response.data);
-        calculateProfitLossPercentage(response.data); // Call calculateProfitLossPercentage with the fetched data
-        setData(response.data); // Update the state with the fetched data
+        calculateProfitLossPercentage(response.data);
+        setData(response.data);
       } catch (error) {
         console.error('Error fetching external data:', error);
-        setError(error.message); // Set the error message
+        setError(error.message);
       }
     };
 
-    fetchExternalData(); // Call the function
+    fetchExternalData()
   }, []);
 
   const calculateProfitLossPercentage = (data) => {
-    const purchases = data.purchases || 0; // Default to 0 if undefined
-    const revenue = data.revenue || 0; // Ensure a number is used
+    const purchases = data.purchases || 0;
+    const revenue = data.revenue || 0;
     const refunds = data.refunds || 0;
 
     const purchasesPL = ((purchases - 4000) / 4000) * 100; 
@@ -49,7 +49,7 @@ const Comp1 = () => {
 
   return (
     <div className="p-4 border border-slate-200 rounded-lg shadow-sm">
-      {error && <p className="text-red-500 text-center">{error}</p>} {/* Display error message if any */}
+      {error && <p className="text-red-500 text-center">{error}</p>}
       <div className="flex justify-between">
         <div className="text-3xl font-bold">Dashboard</div>
         <div className="flex gap-3">

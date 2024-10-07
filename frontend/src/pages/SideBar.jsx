@@ -40,7 +40,6 @@ const SideBar = () => {
         </div>
       </nav>
 
-      {/* User Info Section with Adjusted Positioning */}
       <div className="absolute inset-x-0 bottom-0 w-full flex items-center p-4 border-t border-gray-200">
         <FaUserCircle className="h-10 w-10 text-gray-600" />
         <div className="ml-2 overflow-hidden">

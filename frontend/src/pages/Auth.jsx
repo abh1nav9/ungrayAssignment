@@ -1,5 +1,3 @@
-// src/pages/Auth.jsx
-
 import React, { useState } from 'react';
 
 const Auth = ({ onLogin }) => {
@@ -10,7 +8,7 @@ const Auth = ({ onLogin }) => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === 'trial' && password === 'assignment123') {
-      onLogin(); // Call the onLogin function passed as a prop
+      onLogin();
     } else {
       setError('Invalid username or password');
     }

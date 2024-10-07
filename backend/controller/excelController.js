@@ -49,7 +49,6 @@ const fetchDataFromTables = async (req, res) => {
     res.status(200).json({
       table1: table1Data.rows,
       table2: table2Data.rows,
-      // table3: table3Data.rows, // Uncomment if you want to include data from table3
     });
   } catch (error) {
     console.error("Error fetching data:", error);

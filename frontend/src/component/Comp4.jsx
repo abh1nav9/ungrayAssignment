@@ -34,16 +34,16 @@ const Comp4 = () => {
             {
               label: 'Web Sales',
               data: webSalesData,
-              borderColor: 'rgba(135, 206, 235, 1)', // SkyBlue
-              backgroundColor: 'rgba(135, 206, 235, 0.5)', // SkyBlue with transparency
+              borderColor: 'rgba(135, 206, 235, 1)',
+              backgroundColor: 'rgba(135, 206, 235, 0.5)',
               borderWidth: 2,
               fill: false,
             },
             {
               label: 'Offline Sales',
               data: offlineSalesData,
-              borderColor: 'rgba(0, 0, 255, 1)', // Blue
-              backgroundColor: 'rgba(0, 0, 255, 0.5)', // Blue with transparency
+              borderColor: 'rgba(0, 0, 255, 1)',
+              backgroundColor: 'rgba(0, 0, 255, 0.5)',
               borderWidth: 2,
               fill: false,
             },
