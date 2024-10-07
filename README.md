@@ -64,7 +64,15 @@ cd ../frontend
 npm install
 ```
 
-### 4. Run Project
+### 4. Change Path
+Change path for SheetData.xlsx
+
+```bash
+cd backend/router
+line 9: router.post("/upload", upload.single("path for SheetData.xlsx"), insertDataFromExcel);
+```
+
+### 5. Run Project
 
 After installing the dependencies, you can run each part of the project separately.
 
